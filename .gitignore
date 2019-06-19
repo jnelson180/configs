@@ -1,0 +1,10 @@
+# ignore all files by default
+*
+
+# specify only the config files we want to store
+!.zshrc
+!.bashrc
+!.tigrc
+!.oh-my-zsh/
+!.vim
+!.vimrc
