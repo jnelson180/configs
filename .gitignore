@@ -8,3 +8,6 @@
 !.oh-my-zsh/
 !.vim
 !.vimrc
+
+# specify .gitignore since we actually want to track it
+!.gitignore
