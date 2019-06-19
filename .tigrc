@@ -1,0 +1,37 @@
+# disable importing colors from git config
+# (breaks main-ref coloring, probably others)
+set git-colors = no
+
+# diff view
+color diff-header		39	235	bold
+# color diff-index		81	235	bold
+# color diff-oldmode		81	235	bold
+# color diff-newmode		81	235	bold
+# color "rename from "		81	235	bold
+# color "rename to "		81	235	bold
+# color "similarity "		81	235	bold
+# color "dissimilarity "		81	235	bold
+# color diff-stat			222	235	bold
+# color diff-chunk		165	235	bold
+# color diff-add			154	235	bold
+# color diff-add-highlight	232	154	bold
+# color diff-del			196	235	bold
+# color diff-del-highlight	232	196	bold
+# color " +"			154	default
+# color " -"			196	default
+# color "--- "			39	235	bold
+# color "+++ "			39	235	bold
+# color "@@"                     39	235	bold
+# color "Merge: "			222	235	bold
+# color "Refs: "			222	235	bold
+# color "commit "			154	235	bold
+# color "Commit: "		39	235	bold
+# color "CommitDate: "		165	235	bold
+# color "Author: "		39	235	bold
+# color "AuthorDate: "		165	235	bold
+# color "Tagger: "		222	235	bold
+# color "TaggerDate: "		222	235	bold
+# color "---"			165	default	bold
+
+# misc
+set split-view-width                = 55%
