@@ -1,5 +1,5 @@
 # Download chrome, then:
-    sudo apt-get install libappindicator3-1
+    sudo apt-get install libappibb7cb7e4d8bb8d0b4123fc5c2924b442f912e955ndicator3-1
 	sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb 
 
 # Install vscode https://code.visualstudio.com/download#
@@ -10,18 +10,19 @@
  
 # Install quicktile
 	sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck python-setuptools
+	# if python-wnck isn't found, attempt next steps:
 	sudo apt-get install python3-gi gir1.2-wnck-3.0
 	sudo apt install python-pip
 	sudo apt install libpango1.0-0 pip
 	wget http://ftp.br.debian.org/debian/pool/main/g/gnome-python-desktop/python-wnck_2.32.0+dfsg-3_amd64.deb
 	sudo dpkg -i python-wnck_2.32.0+dfsg-3_amd64.deb 
 	sudo apt-get install pygtk
-	sudo apt-get install python-gtk2-dev
 	sudo apt --fix-broken install
 	sudo apt-get install python-gtk2-dev
+	# end next steps
 	sudo -H pip2 install https://github.com/ssokolow/quicktile/archive/master.zip
    
-# get new git token
+# get new git token if needed
 # https://github.com/settings/tokens
 
 # install npm
@@ -36,11 +37,27 @@
 	cd repos
 	git clone https://github.com/clintonelec/connect-web.git
 	
+# install tig
+	sudo apt-get install tig
+
+# install zsh
+	sudo apt-get install curl
+	sudo apt-get install zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# install zsh syntax highlighting
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+	
 # clone configs
 	cd ~/
 	git clone https://github.com/jnelson180/configs.git
 	cp .bashrc ../; cp .fzf.bash ../; cp .fzf.zsh ../; cp .tigrc ../; 
 	cp .vimrc ../; cp .zshrc ../
 	
-# install tig
-	sudo apt-get install tig
+	# if on ubuntu and not mac
+	# comment out line with . `brew --prefix`/etc/profile.d/z.sh
+	# delete last source command
+
+
+
