@@ -1,0 +1,46 @@
+# Download chrome, then:
+    sudo apt-get install libappindicator3-1
+	sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb 
+
+# Install vscode https://code.visualstudio.com/download#
+# Install code settings sync https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+# Shift + Alt + D
+# Enter personal auth token
+# Enter gist id
+ 
+# Install quicktile
+	sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck python-setuptools
+	sudo apt-get install python3-gi gir1.2-wnck-3.0
+	sudo apt install python-pip
+	sudo apt install libpango1.0-0 pip
+	wget http://ftp.br.debian.org/debian/pool/main/g/gnome-python-desktop/python-wnck_2.32.0+dfsg-3_amd64.deb
+	sudo dpkg -i python-wnck_2.32.0+dfsg-3_amd64.deb 
+	sudo apt-get install pygtk
+	sudo apt-get install python-gtk2-dev
+	sudo apt --fix-broken install
+	sudo apt-get install python-gtk2-dev
+	sudo -H pip2 install https://github.com/ssokolow/quicktile/archive/master.zip
+   
+# get new git token
+# https://github.com/settings/tokens
+
+# install npm
+	sudo apt install npm
+	
+# install tsc
+	# -g flag generally not recommended, but necessary in lubuntu
+	sudo npm i -g typescript
+	
+# clone connect-web
+	mkdir repos
+	cd repos
+	git clone https://github.com/clintonelec/connect-web.git
+	
+# clone configs
+	cd ~/
+	git clone https://github.com/jnelson180/configs.git
+	cp .bashrc ../; cp .fzf.bash ../; cp .fzf.zsh ../; cp .tigrc ../; 
+	cp .vimrc ../; cp .zshrc ../
+	
+# install tig
+	sudo apt-get install tig

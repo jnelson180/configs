@@ -10,6 +10,7 @@
 !.vimrc
 !.fzf.bash
 !.fzf.zsh
+!setup_process
 
 # specify .gitignore since we actually want to track it
 !.gitignore
