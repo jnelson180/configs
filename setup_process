@@ -1,12 +1,13 @@
-# Download chrome, then:
-    sudo apt-get install libappibb7cb7e4d8bb8d0b4123fc5c2924b442f912e955ndicator3-1
+# Install Chrome
+    	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    	sudo apt-get install libappibb7cb7e4d8bb8d0b4123fc5c2924b442f912e955ndicator3-1
 	sudo dpkg -i ~/Downloads/google-chrome-stable_current_amd64.deb 
 
 # Install vscode https://code.visualstudio.com/download#
-# Install code settings sync https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
-# Shift + Alt + D
-# Enter personal auth token
-# Enter gist id
+	# Install code settings sync https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+	# Shift + Alt + D
+	# Enter personal auth token
+	# Enter gist id
  
 # Install quicktile
 	sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck python-setuptools
@@ -59,5 +60,21 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 	# comment out line with . `brew --prefix`/etc/profile.d/z.sh
 	# delete last source command
 
+# if touchpad doesn't work for clicks (lubuntu)
+	sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf
 
+	# contents should include...
+	Section "InputClass"   
+  	  Identifier "touchpad"  
+  	  Driver "libinput"  
+  	  MatchIsTouchpad "on"  
+  	  Option "Tapping" "on"  
+	EndSection  
 
+# Install Franz
+	# https://meetfranz.com/#download
+
+# Lubuntu; stop suspending laptop from freezing it
+	sudo nano /etc/default/grub
+	# change line GRUB_CMDLINE_LINUX=""
+	# to GRUB_CMD_LINUX="nouveau.modeset=0"
